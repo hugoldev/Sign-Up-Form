@@ -14,6 +14,8 @@
 		9A59F5EE2A028E350094D711 /* Singn_InTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59F5ED2A028E350094D711 /* Singn_InTests.swift */; };
 		9A59F5F82A028E350094D711 /* Singn_InUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59F5F72A028E350094D711 /* Singn_InUITests.swift */; };
 		9A59F5FA2A028E350094D711 /* Singn_InUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59F5F92A028E350094D711 /* Singn_InUITestsLaunchTests.swift */; };
+		9A59F6082A028F160094D711 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59F6072A028F160094D711 /* LoginView.swift */; };
+		9A59F60C2A0298C80094D711 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59F60B2A0298C80094D711 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		9A59F5F32A028E350094D711 /* Singn InUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Singn InUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A59F5F72A028E350094D711 /* Singn_InUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singn_InUITests.swift; sourceTree = "<group>"; };
 		9A59F5F92A028E350094D711 /* Singn_InUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singn_InUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A59F6072A028F160094D711 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9A59F60B2A0298C80094D711 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				9A59F5DC2A028E330094D711 /* Singn_InApp.swift */,
+				9A59F60A2A0298A50094D711 /* Extensions */,
+				9A59F6062A028F010094D711 /* View */,
 				9A59F5DE2A028E330094D711 /* ContentView.swift */,
 				9A59F5E02A028E350094D711 /* Assets.xcassets */,
 				9A59F5E22A028E350094D711 /* Preview Content */,
@@ -125,6 +131,22 @@
 				9A59F5F92A028E350094D711 /* Singn_InUITestsLaunchTests.swift */,
 			);
 			path = "Singn InUITests";
+			sourceTree = "<group>";
+		};
+		9A59F6062A028F010094D711 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A59F6072A028F160094D711 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A59F60A2A0298A50094D711 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A59F60B2A0298C80094D711 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A59F6082A028F160094D711 /* LoginView.swift in Sources */,
 				9A59F5DF2A028E330094D711 /* ContentView.swift in Sources */,
+				9A59F60C2A0298C80094D711 /* String.swift in Sources */,
 				9A59F5DD2A028E330094D711 /* Singn_InApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
