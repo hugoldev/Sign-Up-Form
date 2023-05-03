@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  Singn In
 //
 //  Created by Hugo Lopes Mendonca on 03/05/23.
@@ -8,13 +8,11 @@
 import SwiftUI
 import FirebaseAuth
 
-struct LoginView: View {
-    
-    @AppStorage ("uid") var userID: String = ""
-    @Binding var currentShowingView: String
-    
+struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @AppStorage ("uid") var userID: String = ""
+    @Binding var currentShowingView: String
     
     private func isValidPassword(_ password: String) -> Bool {
         
@@ -31,7 +29,7 @@ struct LoginView: View {
             
             VStack {
                 HStack {
-                    Text("Welcome Back!")
+                    Text("Create an Account!")
                         .font(.largeTitle)
                         .bold()
                         .padding()
@@ -83,12 +81,12 @@ struct LoginView: View {
                 )
                 .padding()
                 
-                Button(action: {
+                Button(action:{
                     withAnimation {
-                        self.currentShowingView = "signup"
+                        self.currentShowingView = "login"
                     }
-                    }) {
-                    Text("Don't have an account?")
+                }) {
+                    Text("Already have an account?")
                         .foregroundColor(.black.opacity(0.7))
                 }
                 Spacer()
@@ -96,24 +94,24 @@ struct LoginView: View {
                
                 Button {
                     
-                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                    
+                    
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        
                         if let error = error {
                             print(error)
                             return
                         }
                         
-                        if let authResult = authResult {
+                        if let authResult = authResult{
                             print(authResult.user.uid)
-                            withAnimation {
-                                userID = authResult.user.uid
-                            }
+                            userID = authResult.user.uid
                         }
-                        
-                        
+                      // ...
                     }
                     
                 } label: {
-                    Text("Sing In")
+                    Text("Create New Account")
                         .foregroundColor(Color.white)
                         .font(.title3)
                         .bold()
@@ -129,7 +127,4 @@ struct LoginView: View {
         }
     }
 }
-
-
-
 

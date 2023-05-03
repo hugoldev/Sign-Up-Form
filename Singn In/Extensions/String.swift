@@ -17,4 +17,4 @@ extension String {
         return regex.firstMatch(in: self, range: NSRange(location: 0, length: count)) != nil
     }
 }
-let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
+
